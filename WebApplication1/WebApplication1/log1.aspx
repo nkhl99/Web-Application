@@ -31,7 +31,7 @@
     <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox class="txti" ID="user" runat="server" BorderColor="Black" Height="31px" 
-            Width="163px" ontextchanged="user_TextChanged" placeholder="Enter userid"></asp:TextBox>
+            Width="163px" ontextchanged="user_TextChanged" placeholder="Username"></asp:TextBox>
         <asp:RequiredFieldValidator class="val_user" ID="RequiredFieldValidator1" runat="server" 
         ControlToValidate="user" ErrorMessage="Please enter user id " 
         ForeColor="Red"></asp:RequiredFieldValidator>
@@ -43,15 +43,15 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox class="txtp" ID="Password" runat="server" BorderColor="Black" Height="31px" 
             ontextchanged="Password_TextChanged" TextMode="Password" Width="163px" 
-        placeholder="Enter password"></asp:TextBox>
+        placeholder="Password"></asp:TextBox>
         <asp:RequiredFieldValidator class="valpassword" ID="RequiredFieldValidator2" runat="server" 
-        ControlToValidate="Password" ErrorMessage="Please enter password" 
+        ControlToValidate="Password" ErrorMessage="Please Enter Password" 
         ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         <br />
         <br />
         <asp:Button class="btnln" ID="Button1" runat="server" BackColor="Black" ForeColor="White" 
-            Height="31px" onclick="Button1_Click" Text="Login" Width="161px" />
+            Height="41px" onclick="Button1_Click" Text="Login" Width="148px" />
 &nbsp;</form>
 
 </body>

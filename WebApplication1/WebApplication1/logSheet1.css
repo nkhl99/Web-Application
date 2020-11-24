@@ -1,7 +1,7 @@
 ﻿body 
 {
      text-align:center;
-     background-image:url(Images/bg6.png);
+     background-image:url(Images/bg03.jpg);
      background-repeat:no-repeat;
      background-size:cover;
 }
@@ -17,7 +17,8 @@
       border-radius:20px;
       cursor:pointer;
       transition: .3s ease-in-out;
-    }
+      margin-left: 28px;
+}
     
 .btnln:hover
 {
