@@ -63,6 +63,7 @@
     <Content Include="log1.aspx" />
     <Content Include="logSheet1.css" />
     <Content Include="search.aspx" />
+    <Content Include="searchSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
