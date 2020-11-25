@@ -7,3 +7,8 @@ C:\Users\Lenovo\Desktop\Web-Application\WebApplication1\WebApplication1\bin\WebA
 C:\Users\Lenovo\Desktop\Web-Application\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Lenovo\Desktop\Web-Application\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
 C:\Users\Lenovo\Desktop\Web-Application\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\WebApplication1\WebApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
