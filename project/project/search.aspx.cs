@@ -64,27 +64,37 @@ namespace project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Label1.Text = "";
+            try
+            {
 
-            if (TextBox1.Text == "")
-            {
-                nosearchcontent();
-                
+                if (TextBox1.Text == "")
+                {
+                    nosearchcontent();
+
+                }
+                else
+                {
+                    SqlConnection sqlconn = new SqlConnection(mainconn);
+                    sqlconn.Open();
+                    SqlCommand sqlcomm = new SqlCommand();
+                    string query = "select * from " + DropDownList1.SelectedValue + " where " + DropDownList2.SelectedValue + "='" + TextBox1.Text + "'";
+                    sqlcomm.CommandText = query;
+                    sqlcomm.Connection = sqlconn;
+                    sqlcomm.Parameters.AddWithValue("user_id", TextBox1.Text);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+                    sda.Fill(dt);
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                    sqlconn.Close();
+                }
             }
-            else
+            catch (System.Data.SqlClient.SqlException wronginputtype)
             {
-                SqlConnection sqlconn = new SqlConnection(mainconn);
-                sqlconn.Open();
-                SqlCommand sqlcomm = new SqlCommand();
-                string query = "select * from " + DropDownList1.SelectedValue + " where " + DropDownList2.SelectedValue + "='" + TextBox1.Text + "'";
-                sqlcomm.CommandText = query;
-                sqlcomm.Connection = sqlconn;
-                sqlcomm.Parameters.AddWithValue("user_id", TextBox1.Text);
-                DataTable dt = new DataTable();
-                SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
-                sda.Fill(dt);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-                sqlconn.Close();
+                Label1.Text = "enter correct input";
+                
+                //throw;
             }
             
         }
@@ -95,10 +105,13 @@ namespace project
             if(table=="0")
             {
                 DropDownList2.Enabled = false;
+                TextBox1.Text = "";
                 TextBox1.Enabled = false;
+                
             }
             else
 	        {
+                TextBox1.Text = "";
                 DropDownList2.Enabled = true; 
                 SqlConnection sqlconn = new SqlConnection(mainconn);
                 sqlconn.Open();
@@ -119,10 +132,12 @@ namespace project
             string columns = DropDownList2.SelectedValue;
             if (columns == "0")
             {
+                TextBox1.Text = "";
                 TextBox1.Enabled = false;
             }
             else 
             {
+                TextBox1.Text = "";
                 TextBox1.Enabled = true;
             }
         }
