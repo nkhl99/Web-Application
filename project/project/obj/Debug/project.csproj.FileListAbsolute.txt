@@ -3,3 +3,8 @@ c:\users\win7\documents\visual studio 2010\Projects\project\project\bin\project.
 c:\users\win7\documents\visual studio 2010\Projects\project\project\obj\Debug\ResolveAssemblyReference.cache
 c:\users\win7\documents\visual studio 2010\Projects\project\project\obj\Debug\project.dll
 c:\users\win7\documents\visual studio 2010\Projects\project\project\obj\Debug\project.pdb
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\project\project\bin\project.dll
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\project\project\bin\project.pdb
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\project\project\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\project\project\obj\Debug\project.dll
+C:\Users\win7\Desktop\sohan_mp\B_proj\Web-Application\project\project\obj\Debug\project.pdb
