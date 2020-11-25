@@ -23,10 +23,10 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LoginConnectionString"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LoginConnectionString"].ConnectionString);
             //SqlConnection con=new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\DELL\documents\visual studio 2010\Projects\WebApplication1\WebApplication1\App_Data\lohin_db1.mdf;Integrated Security=True;User Instance=True");
             con.Open();
-            string checkuser = "select count(*) from logtb where user_id='"+user.Text+"' and password='"+Password.Text+"'";
+            string checkuser = "select count(*) from log_tb where user_id='"+user.Text+"' and password='"+Password.Text+"'";
             SqlCommand cmd = new SqlCommand(checkuser,con);
 
              string output=cmd.ExecuteScalar().ToString();
