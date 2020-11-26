@@ -16,9 +16,9 @@
         </div>
         <div class="Header_Menu">
         <ul>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="log1.aspx">Logout</a></li>
+        <li><a href="About_us.aspx">ABOUT US</a></li>
+        <li><a href="ContactUs.aspx">CONTACT</a></li>
+        <li><a href="log1.aspx">LOGOUT</a></li>
         </ul>
         </div>
     
@@ -26,12 +26,11 @@
     </div>
     <div>
     
-        <br />
-        <br />
+        
     
         <asp:DropDownList ID="DropDownList1" runat="server" Height="23px"  AutoPostBack="true"
             onselectedindexchanged="DropDownList1_SelectedIndexChanged" Width="158px">
-            <asp:ListItem Value="0">---select type--</asp:ListItem>
+            <asp:ListItem Value="0">Select</asp:ListItem>
             <asp:ListItem Value="customer_tb">customer</asp:ListItem>
             <asp:ListItem Value="product_tb">product</asp:ListItem>
         </asp:DropDownList>
