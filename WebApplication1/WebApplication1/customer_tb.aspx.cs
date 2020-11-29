@@ -21,7 +21,7 @@ namespace project
                 if (Request.QueryString["ID"] != null)
                 {
                     SqlConnection con = new SqlConnection(mainconn);
-                    string query = "select customer_id,f_name,l_name,phone_number,email_id,state,country,pincode from customer_tb inner join customer_details_tb on customer_tb.customer_id=" + Request.QueryString["ID"].ToString() + " and customer_details_tb.customerD_id=" + Request.QueryString["ID"].ToString() + "";
+                    string query = "select customer_id,first_name,last_name,phone_number,email_id,state,country,pincode from customer_tb inner join customer_details_tb on customer_tb.customer_id=" + Request.QueryString["ID"].ToString() + " and customer_details_tb.customerD_id=" + Request.QueryString["ID"].ToString() + "";
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
@@ -45,7 +45,13 @@ namespace project
                         TextBox8.Text = ds.Tables[0].Rows[0][7].ToString();
                         Button2.Enabled = false;
                         Button5.Enabled = false;
-                    } 
+                    }
+                    string forgrid = "select * from sales_tb where customerS_name='" + ds.Tables[0].Rows[0][1].ToString() + "'";
+                    SqlDataAdapter da2 = new SqlDataAdapter(forgrid, con);
+                    DataSet ds2 = new DataSet();
+                    da2.Fill(ds2);
+                    GridView1.DataSource = ds2;
+                    GridView1.DataBind();
                 }
 
             }
@@ -208,6 +214,16 @@ namespace project
             TextBox7.Text = "";
             TextBox8.Text = "";
             Label1.Text = "Operation Has Been Cancelled Successfully";
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            string IDV = row.Cells[1].Text;
+            HyperLink link = new HyperLink();
+            link.Text = "view";
+            link.NavigateUrl = "sales_tb.aspx?ID=" + IDV + "";
+            row.Cells[0].Controls.Add(link);
         }
 
     }

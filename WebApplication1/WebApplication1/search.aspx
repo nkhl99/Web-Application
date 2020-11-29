@@ -36,6 +36,7 @@
             <asp:ListItem Value="0">Select</asp:ListItem>
             <asp:ListItem Value="customer_tb">customer</asp:ListItem>
             <asp:ListItem Value="product_tb">product</asp:ListItem>
+            <asp:ListItem Value="sales_tb">sales</asp:ListItem>
         </asp:DropDownList>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:DropDownList ID="DropDownList2" runat="server" Height="23px" Width="158px" 
@@ -52,6 +53,8 @@
         <asp:Button ID="Button1" runat="server" Text="Search" TextColur="black" onclick="Button1_Click" 
             BorderColor="White" BorderStyle="Double" ForeColor="White" Height="42px" 
             Width="137px" BackColor="#666666" />
+            <br />
+            <br />
             </div>
         <br />
     <div class="center">

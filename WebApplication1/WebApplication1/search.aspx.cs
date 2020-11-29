@@ -164,7 +164,7 @@ namespace project
 
             if (DropDownList1.SelectedValue == "customer_tb")
             {
-                Response.Write("123");
+                
                 GridViewRow row = GridView1.SelectedRow;
                 string IDV = row.Cells[1].Text;
                 HyperLink link = new HyperLink();
@@ -173,14 +173,24 @@ namespace project
                 row.Cells[0].Controls.Add(link);
             }
 
-            else
+            else if (DropDownList1.SelectedValue == "product_tb")
             {
-                Response.Write("123");
+
                 GridViewRow row = GridView1.SelectedRow;
                 string IDV = row.Cells[1].Text;
                 HyperLink link = new HyperLink();
                 link.Text = "view";
                 link.NavigateUrl = "product_tb.aspx?ID=" + IDV + "";
+                row.Cells[0].Controls.Add(link);
+            }
+            else
+            {
+
+                GridViewRow row = GridView1.SelectedRow;
+                string IDV = row.Cells[1].Text;
+                HyperLink link = new HyperLink();
+                link.Text = "view";
+                link.NavigateUrl = "sales_tb.aspx?ID=" + IDV + "";
                 row.Cells[0].Controls.Add(link);
             }
         }

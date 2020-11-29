@@ -69,6 +69,7 @@
     <Content Include="logSheet1.css" />
     <Content Include="productDSheet.css" />
     <Content Include="product_tb.aspx" />
+    <Content Include="sales_tb.aspx" />
     <Content Include="search.aspx" />
     <Content Include="searchSheet1.css" />
     <Content Include="customerDSheet.css" />
@@ -117,6 +118,13 @@
       <DependentUpon>product_tb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sales_tb.aspx.cs">
+      <DependentUpon>sales_tb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sales_tb.aspx.designer.cs">
+      <DependentUpon>sales_tb.aspx</DependentUpon>
+    </Compile>
     <Compile Include="search.aspx.cs">
       <DependentUpon>search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
