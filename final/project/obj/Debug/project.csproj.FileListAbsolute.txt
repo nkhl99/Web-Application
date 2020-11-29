@@ -13,3 +13,7 @@ C:\Users\win7\Desktop\sohan_mp\Testing codes\project2\project\bin\project.pdb
 C:\Users\win7\Desktop\sohan_mp\Testing codes\project2\project\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\win7\Desktop\sohan_mp\Testing codes\project2\project\obj\Debug\project.dll
 C:\Users\win7\Desktop\sohan_mp\Testing codes\project2\project\obj\Debug\project.pdb
+C:\Users\Lenovo\Desktop\Web-Application\final\project\bin\project.dll
+C:\Users\Lenovo\Desktop\Web-Application\final\project\bin\project.pdb
+C:\Users\Lenovo\Desktop\Web-Application\final\project\obj\Debug\project.dll
+C:\Users\Lenovo\Desktop\Web-Application\final\project\obj\Debug\project.pdb

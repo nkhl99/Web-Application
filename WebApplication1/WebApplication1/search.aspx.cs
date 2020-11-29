@@ -5,10 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-using System.Configuration;
 using System.Data;
+using System.Configuration;
 
-namespace WebApplication1
+namespace project
 {
     public partial class search : System.Web.UI.Page
     {
@@ -64,27 +64,37 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-            if (TextBox1.Text == "")
+            Label1.Text = "";
+            try
             {
-                nosearchcontent();
 
+                if (TextBox1.Text == "")
+                {
+                    nosearchcontent();
+
+                }
+                else
+                {
+                    SqlConnection sqlconn = new SqlConnection(mainconn);
+                    sqlconn.Open();
+                    SqlCommand sqlcomm = new SqlCommand();
+                    string query = "select * from " + DropDownList1.SelectedValue + " where " + DropDownList2.SelectedValue + "='" + TextBox1.Text + "'";
+                    sqlcomm.CommandText = query;
+                    sqlcomm.Connection = sqlconn;
+                    sqlcomm.Parameters.AddWithValue("user_id", TextBox1.Text);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+                    sda.Fill(dt);
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                    sqlconn.Close();
+                }
             }
-            else
+            catch (System.Data.SqlClient.SqlException wronginputtype)
             {
-                SqlConnection sqlconn = new SqlConnection(mainconn);
-                sqlconn.Open();
-                SqlCommand sqlcomm = new SqlCommand();
-                string query = "select * from " + DropDownList1.SelectedValue + " where " + DropDownList2.SelectedValue + "='" + TextBox1.Text + "'";
-                sqlcomm.CommandText = query;
-                sqlcomm.Connection = sqlconn;
-                sqlcomm.Parameters.AddWithValue("user_id", TextBox1.Text);
-                DataTable dt = new DataTable();
-                SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
-                sda.Fill(dt);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-                sqlconn.Close();
+                Label1.Text = "enter correct input";
+
+                //throw;
             }
 
         }
@@ -95,10 +105,13 @@ namespace WebApplication1
             if (table == "0")
             {
                 DropDownList2.Enabled = false;
+                TextBox1.Text = "";
                 TextBox1.Enabled = false;
+
             }
             else
             {
+                TextBox1.Text = "";
                 DropDownList2.Enabled = true;
                 SqlConnection sqlconn = new SqlConnection(mainconn);
                 sqlconn.Open();
@@ -109,7 +122,7 @@ namespace WebApplication1
                 DropDownList2.DataTextField = "COLUMN_NAME";
                 DropDownList2.DataValueField = "COLUMN_NAME";
                 DropDownList2.DataBind();
-                DropDownList2.Items.Insert(0, new ListItem("Select ", "0"));
+                DropDownList2.Items.Insert(0, new ListItem("Select", "0"));
                 sqlconn.Close();
             }
         }
@@ -119,10 +132,12 @@ namespace WebApplication1
             string columns = DropDownList2.SelectedValue;
             if (columns == "0")
             {
+                TextBox1.Text = "";
                 TextBox1.Enabled = false;
             }
             else
             {
+                TextBox1.Text = "";
                 TextBox1.Enabled = true;
             }
         }
@@ -143,5 +158,33 @@ namespace WebApplication1
             GridView1.DataBind();
             sqlconn.Close();
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (DropDownList1.SelectedValue == "customer_tb")
+            {
+                Response.Write("123");
+                GridViewRow row = GridView1.SelectedRow;
+                string IDV = row.Cells[1].Text;
+                HyperLink link = new HyperLink();
+                link.Text = "view";
+                link.NavigateUrl = "customer_tb.aspx?ID=" + IDV + "";
+                row.Cells[0].Controls.Add(link);
+            }
+
+            else
+            {
+                Response.Write("123");
+                GridViewRow row = GridView1.SelectedRow;
+                string IDV = row.Cells[1].Text;
+                HyperLink link = new HyperLink();
+                link.Text = "view";
+                link.NavigateUrl = "product_tb.aspx?ID=" + IDV + "";
+                row.Cells[0].Controls.Add(link);
+            }
+        }
+
+
     }
 }

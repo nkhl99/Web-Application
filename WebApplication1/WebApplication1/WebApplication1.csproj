@@ -58,6 +58,7 @@
     </Content>
     <Content Include="ContactUs.aspx" />
     <Content Include="ContactUsSheet.css" />
+    <Content Include="customer_tb.aspx" />
     <Content Include="Images\background1.jpg" />
     <Content Include="Images\bg2.png" />
     <Content Include="Images\bg3.jpg" />
@@ -66,8 +67,11 @@
     <Content Include="Images\Login.PNG" />
     <Content Include="log1.aspx" />
     <Content Include="logSheet1.css" />
+    <Content Include="productDSheet.css" />
+    <Content Include="product_tb.aspx" />
     <Content Include="search.aspx" />
     <Content Include="searchSheet1.css" />
+    <Content Include="customerDSheet.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -91,12 +95,26 @@
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer_tb.aspx.cs">
+      <DependentUpon>customer_tb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer_tb.aspx.designer.cs">
+      <DependentUpon>customer_tb.aspx</DependentUpon>
+    </Compile>
     <Compile Include="log1.aspx.cs">
       <DependentUpon>log1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="log1.aspx.designer.cs">
       <DependentUpon>log1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product_tb.aspx.cs">
+      <DependentUpon>product_tb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_tb.aspx.designer.cs">
+      <DependentUpon>product_tb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="search.aspx.cs">
