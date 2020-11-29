@@ -1,0 +1,5 @@
+c:\users\lenovo\documents\visual studio 2010\Projects\Demo\Demo1\bin\Demo1.dll
+c:\users\lenovo\documents\visual studio 2010\Projects\Demo\Demo1\bin\Demo1.pdb
+c:\users\lenovo\documents\visual studio 2010\Projects\Demo\Demo1\obj\Debug\Demo1.dll
+c:\users\lenovo\documents\visual studio 2010\Projects\Demo\Demo1\obj\Debug\Demo1.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Demo\Demo1\obj\Debug\Demo1.csprojResolveAssemblyReference.cache
