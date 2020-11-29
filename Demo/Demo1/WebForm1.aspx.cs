@@ -15,14 +15,14 @@ public partial class SendMail : System.Web.UI.Page
         {
             MailMessage mail = new MailMessage();
             mail.To.Add(txtto.Text);
-            mail.From = new MailAddress("testmailtm03@gmail.com");
+            mail.From = new MailAddress("testmailtm03@gmail.com");// use only gmail
             mail.Subject = txtsub.Text;
             mail.Body = Request.Form["txtmsg"];
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new System.Net.NetworkCredential("nkhlkumar01@gmail.com", "akhilasank.99");
+            smtp.Credentials = new System.Net.NetworkCredential("ur email", "ur password");
             smtp.EnableSsl = true;
 
             smtp.Send(mail);
