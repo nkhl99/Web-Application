@@ -14,7 +14,7 @@
         <div class="main">
             <h1>About Us...</h1>
             <p>
-            X is a human-sized team of two developers devoted to construct a website for the purpose 
+            Cloud9 is a human-sized team of two developers devoted to construct a website for the purpose 
             of visualising company activity in a simplified manner. Both Nikhil and Sohan were hired 
             to work for Broadridge financial solutions as Freshers. We are based in Bangalore/Hyderabad,
             India.

@@ -11,17 +11,36 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <div class="Header">
+    <div class="Header_div">
+        <div class="Header_Logo">
+        </div>
+        <div class="Header_Menu">
+        <ul>
+        <li><a href="About_us.aspx">ABOUT US</a></li>
+        <li><a href="search.aspx">BACK</a></li>
+        <li><a href="log1.aspx">LOGOUT</a></li>
+        </ul>
+        </div>
+    
+    </div>
+    </div>
     <div class="container">
 		<div class="contact-box">
 			<div class="left"></div>
 			<div class="right">
 				<h2>Contact Us</h2>
-				<input type="text" class="field" placeholder="Your Name"/>
-				<input type="text" class="field" placeholder="Your Email"/>
-				<input type="text" class="field" placeholder="Phone"/>
-				<textarea placeholder="Message" class="field"></textarea>
-
-				<button type="submit" class="btn">Send</button>
+				<input type="text" name="names" class="field" placeholder="Your Name"/>
+				<input type="text" name="mail" class="field" placeholder="Your Email"/>
+				<input type="text" name="phone" class="field" placeholder="Mobile"/>
+				<textarea name="body" placeholder="Message" class="field"></textarea>
+                <%--<asp:TextBox ID="Textbody" runat="server"></asp:TextBox>
+                <br />
+                <br />--%>
+                <asp:Button ID="Button1" runat="server" Text="Send" onclick="Button1_Click" 
+                    BackColor="Silver" BorderColor="#CCCCCC" BorderStyle="Groove" Height="42px" 
+                    Width="94px" />
+                <%--<button type="submit" class="btn">Send</button>--%>
 			</div>
 		</div>
 	</div>

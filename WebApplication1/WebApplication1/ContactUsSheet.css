@@ -9,6 +9,47 @@ body{
 	height: 100px;
 	width: 100%;
 }
+.Header
+{
+    background-image:url(Images/h04.png);
+    width:100%;
+    height: 20px;
+}
+.Header_div
+{
+    width:100px;
+    margin:auto;
+}
+.Header_Logo
+{
+    font-size: 75px;
+    font-family: Edwardian Script ITC;
+    position:absolute;
+    left: 0;       
+}
+.Header_Menu
+{
+    position:absolute;
+    right: 0;
+}
+.Header_Menu ul
+{
+    margin: 0px;
+    padding: 0px;    
+}
+.Header_Menu ul li
+{
+    display:inline-block;
+    width: 100px;    
+}
+.Header_Menu ul li a
+{
+    font-family: Calibri;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    display: block;    
+}
 
 .container{
 	position: relative;
