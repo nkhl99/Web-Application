@@ -12,7 +12,7 @@
     <div class="Header">
     <div class="Header_div">
         <div class="Header_Logo">
-        Welcome
+        Product Details
         </div>
         <div class="Header_Menu">
         <ul>

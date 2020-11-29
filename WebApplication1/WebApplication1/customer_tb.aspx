@@ -34,7 +34,7 @@
     <div class="Header">
     <div class="Header_div">
         <div class="Header_Logo">
-        Welcome
+        Customer Details
         </div>
         <div class="Header_Menu">
         <ul>
