@@ -21,7 +21,7 @@ namespace project
                 if (Request.QueryString["ID"] != null)
                 {
                     SqlConnection con = new SqlConnection(mainconn);
-                    string query = "select customer_id,first_name,last_name,phone_number,email_id,state,country,pincode from customer_tb inner join customer_details_tb on customer_tb.customer_id=" + Request.QueryString["ID"].ToString() + " and customer_details_tb.customerD_id=" + Request.QueryString["ID"].ToString() + "";
+                    string query = "select customer_id,f_name,l_name,phone_number,email_id,state,country,pincode from customer_tb inner join customer_details_tb on customer_tb.customer_id=" + Request.QueryString["ID"].ToString() + " and customer_details_tb.customerD_id=" + Request.QueryString["ID"].ToString() + "";
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataSet ds = new DataSet();
                     da.Fill(ds);

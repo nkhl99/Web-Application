@@ -69,6 +69,7 @@
     <Content Include="logSheet1.css" />
     <Content Include="productDSheet.css" />
     <Content Include="product_tb.aspx" />
+    <Content Include="salesDSheet.css" />
     <Content Include="sales_tb.aspx" />
     <Content Include="search.aspx" />
     <Content Include="searchSheet1.css" />

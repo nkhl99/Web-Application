@@ -86,7 +86,7 @@ namespace project
             DropDownList1.DataTextField = "product_name";
             DropDownList1.DataValueField = "product_name";
             DropDownList1.DataBind();
-            DropDownList1.Items.Insert(0, new ListItem("---select value--", "0"));
+            DropDownList1.Items.Insert(0, new ListItem("Select", "0"));
             sqlconn.Close(); 
         }
 

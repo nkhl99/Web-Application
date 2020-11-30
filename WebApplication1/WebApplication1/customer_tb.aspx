@@ -92,7 +92,7 @@
 </div>
     </div>
     <div>
-
+    <div class="center">
         <asp:GridView ID="GridView1" runat="server" ShowHeaderWhenEmpty="True" 
             EmptyDataText="No records found" CellPadding="4" ForeColor="#333333" 
             GridLines="None" AutoGenerateSelectButton="True" 
@@ -110,7 +110,7 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-
+        </div>
     </div>
     </form>
 </body>

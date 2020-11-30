@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>About Us</title>
     <link rel="Stylesheet" href="AboutUsSheet.css" />
     <script src="https://kit.fontawesome.com/f406b40bde.js" crossorigin="anonymous"></script>
@@ -11,6 +11,8 @@
 <body>
     
     <div class="header">
+    
+    
         <div class="main">
             <h1>About Us...</h1>
             <p>
@@ -37,6 +39,6 @@
             </form>
         </div>
     </div>
-    
+ 
 </body>
 </html>
